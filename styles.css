@@ -1,0 +1,21 @@
+h1 {
+	color: white;
+}
+
+.showing-results {
+	color: white;
+}
+
+.movie-poster {
+	max-width: 50px;
+	max-height: auto;
+}
+
+#error-message {
+	color: red;
+}
+
+#now-playing {
+	color: white;
+	font-size: 25px;
+}

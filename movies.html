@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movie Database</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<style>
+		/* Small devices (landscape phones, 576px and up) */
+		@media (min-width: 576px) {
+			.movie-poster {
+				max-width: 75px;
+			}
+		}
+
+		/* Medium devices (tablets, 768px and up) */
+		@media (min-width: 768px) {
+			.movie-poster {
+				max-width: 100px;
+			}
+		}
+
+		/* Large devices (desktops, 992px and up) */
+		@media (min-width: 992px) {
+			.movie-poster {
+				max-width: 125px;
+			}
+		}
+
+		/* X-Large devices (large desktops, 1200px and up) */
+		@media (min-width: 1200px) {
+			.movie-poster {
+				max-width: 150px;
+			}
+		}
+	</style>
+</head>
+
+<body class="bg-dark">
+
+	<div class="container">
+		<div class="row">
+			<h1 class="col-12 mt-3">Movie Search API</h1>
+		</div>
+
+		<div class="row">
+			<form class="col-12" id="movie-form">
+				<div class="form-row">
+					<div class="col-12 mt-4 col-sm-8 col-lg-6">
+						<label for="movie-search" class="sr-only">Movie Search: </label>
+						<input type="text" id="movie-search" class="mr-3 form-control" placeholder="Search...">
+					</div>
+
+					<div class="col-12 mt-4 col-sm-auto">
+						<input type="submit" value="Search Movie" class="btn btn-info">
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="row">
+			<div class="col-12 mt-3" id="error-message"></div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 mt-3">
+				<span id="now-playing">Movies currently in theaters: </span>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-12 mt-3 showing-results">
+				Showing <span id="results-displayed"></span> of <span id="results-total"></span> result(s).
+			</div>
+		</div>
+
+		<div class="row ml-1">
+			<ul id="info-types" class="col-12 list-group mt-4">
+				<li class="list-group-item d-flex text-center bg-light">
+					<span class="col-3 align-self-center">Poster</span>
+					<span class="col-3 align-self-center">Title</span>
+					<span class="col-3 align-self-center">Release Date</span>
+					<span class="col-3 align-self-center">Rating</span>
+				</li>
+			</ul>
+
+			<ul id="results-list" class="col-12 list-group mt-4"></ul>
+		</div>
+	</div>
+
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="script.js"></script>
+</body>
+
+</html>
