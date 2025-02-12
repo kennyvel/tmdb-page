@@ -81,11 +81,11 @@ function createMovie(movie) {
 	const rating = document.createElement("div");
 
 	// Use default movie image if the movie does not have a poster path
-	if (movie.poster_path.length == 0) {
-		img.src = "img/default_movie.jpeg";
+	if (movie.poster_path) {
+		img.src = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
 	}
 	else {
-		img.src = "https://image.tmdb.org/t/p/w500" + movie.poster_path;
+		img.src = "img/default_movie.jpeg";
 	}
 
 	img.alt = movie.title + " Poster";
